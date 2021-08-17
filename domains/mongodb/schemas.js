@@ -44,28 +44,6 @@ const DATA_CONFIG = new Schema({
             father: String,
             mother: String,
         },
-        location: {
-            text: String,
-            map: String,
-        },
-        time_start: {
-            date: {
-                lunar: {
-                    day: String,
-                    month: String,
-                    year: String
-                },
-                solar: {
-                    day: String,
-                    month: String,
-                    year: String
-                }
-            },
-            time: {
-                hour: String,
-                minute: String
-            }
-        },
         finances: Array ,
         email: String,
         phone: String,
@@ -78,33 +56,33 @@ const DATA_CONFIG = new Schema({
             father: String,
             mother: String,
         },
-        location: {
-            text: String,
-            map: String,
-        },
-        time_start: {
-            date: {
-                lunar: {
-                    day: String,
-                    month: String,
-                    year: String
-                },
-                solar: {
-                    day: String,
-                    month: String,
-                    year: String
-                }
-            },
-            time: {
-                hour: String,
-                minute: String
-            }
-        },
         finances: Array,
         email: String,
         phone: String,   
         bg: String,
         bg_fb: String
+    },
+    location: {
+        text: String,
+        map: String,
+    },
+    time_start: {
+        date: {
+            lunar: {
+                day: String,
+                month: String,
+                year: String
+            },
+            solar: {
+                day: String,
+                month: String,
+                year: String
+            }
+        },
+        time: {
+            hour: String,
+            minute: String
+        }
     },
     default: Boolean
 }).pre('save', (next) => {

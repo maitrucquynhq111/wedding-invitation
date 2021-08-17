@@ -14,29 +14,6 @@ const SeedDB = {
         father: "Họ Tên Bố",
         mother: "Họ Tên Mẹ"
       },
-      location: {
-        text: "Quảng Yên - Quảng Ninh - Việt Nam",
-        map: "https://goo.gl/maps/tTZz4qKhaiqSL8Q66"
-      },
-      time_start: {
-        date: {
-          lunar: {
-            day: "17",
-            month: "12",
-            year: "2020"
-          },
-          day_of_week: "5",
-          solar: {
-            day: "17",
-            month: "12",
-            year: "2020"
-          }
-        },
-        time: {
-          hour: "10",
-          minute: "00"
-        }
-      },
       finances: [{
         provider_name: "MB Bank",
         provider_number: "9971997555555",
@@ -65,29 +42,6 @@ const SeedDB = {
         father: "Họ Tên Bố",
         mother: "Họ Tên Mẹ"
       },
-      location: {
-        text: "Quốc Oai - Hà Nội - Việt Nam",
-        map: "https://goo.gl/maps/tRjKuVRNisqxhQaT7"
-      },
-      time_start: {
-        date: {
-          lunar: {
-            day: "17",
-            month: "12",
-            year: "2020"
-          },
-          day_of_week: "5",
-          solar: {
-            day: "17",
-            month: "12",
-            year: "2020"
-          }
-        },
-        time: {
-          hour: "10",
-          minute: "00"
-        }
-      },
       finances: [{
         provider_name: "Techcombank",
         provider_number: "19033799999999",
@@ -109,6 +63,29 @@ const SeedDB = {
       phone: "0985123123",
       bg: '/assets/images/bg.jpg',
       bg_fb: '/assets/images/bg-fb.jpg'
+    },
+    location: {
+      text: "Quốc Oai - Hà Nội - Việt Nam",
+      map: "https://goo.gl/maps/tRjKuVRNisqxhQaT7"
+    },
+    time_start: {
+      date: {
+        lunar: {
+          day: "17",
+          month: "12",
+          year: "2020"
+        },
+        day_of_week: "5",
+        solar: {
+          day: "17",
+          month: "12",
+          year: "2020"
+        }
+      },
+      time: {
+        hour: "10",
+        minute: "00"
+      }
     },
     default: true
   }

@@ -22,7 +22,7 @@ class InvitationController extends BaseController {
             if (!data) {
                 return res.redirect("/setup")
             }
-            res.render('invitation/male', {
+            res.render('invitation/index', {
                 layout: false,
                 data: {
                     mode: MODE.DEFAULT,
@@ -58,26 +58,14 @@ class InvitationController extends BaseController {
             }
 
 
-            if (invitee.area === AREA.FEMALE) {
-                res.render('invitation/female', {
-                    layout: false,
-                    data: {
-                        mode: MODE.HAS_DATA,
-                        cfg: config,
-                        invitee: invitee,
-                    },
-                });
-            } else if (invitee.area === AREA.MALE) {
-                res.render('invitation/male', {
-                    layout: false,
-                    data: {
-                        mode: MODE.HAS_DATA,
-                        cfg: config,
-                        invitee: invitee,
-                    },
-                });
-            }
-
+            res.render('invitation/index', {
+                layout: false,
+                data: {
+                    mode: MODE.HAS_DATA,
+                    cfg: config,
+                    invitee: invitee,
+                },
+            });
 
         } catch (error) {
             res.render('err/occurs-error', {
