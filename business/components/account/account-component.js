@@ -14,15 +14,12 @@ class AccountComponent extends BaseCore {
 
     async verifyAccount(userInput) {
 
-
         if (!userInput) {
             return {
                 status: false,
                 message: 'Invalid input'
             }
         }
-
-
         let account = await this._accountEntity.findOne(userInput.username);
         if (!account) {
             return {
@@ -31,10 +28,9 @@ class AccountComponent extends BaseCore {
             }
         }
 
-
         let isValidPass = await bcrypt.compareSync(userInput.password, account.password);
 
-        if (isValidPass) { 
+        if (isValidPass) {
             return {
                 status: true,
                 user: account,
@@ -68,7 +64,7 @@ class AccountComponent extends BaseCore {
                 status: false,
                 message: 'Username and Password are incorrect'
             }
-        }else{
+        } else {
             return {
                 status: false,
                 message: 'Username has exist'

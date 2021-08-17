@@ -3,8 +3,8 @@ const SeedDB = {
   user: {
     email: "admin@invitation.com",
     username: "admin",
-    password: "$2b$10$VhmfGtzS9/IZPQuLQhmXkeTZmXrHYjIV2HCRfsOEp66Yk/OJiwow2", //123qwe
-    password_confirm: "$2b$10$VhmfGtzS9/IZPQuLQhmXkeTZmXrHYjIV2HCRfsOEp66Yk/OJiwow2",
+    password: "$2a$10$hcuxtMlMfXA4CF6k.O1PPun9wrvg/CsNyM1zjtuoRsVirn2Is4J4G", //123456
+    password_confirm: "$2a$10$hcuxtMlMfXA4CF6k.O1PPun9wrvg/CsNyM1zjtuoRsVirn2Is4J4G",
     role: "admin"
   },
   dataConfig: {
