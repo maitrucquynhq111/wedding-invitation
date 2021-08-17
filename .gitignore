@@ -3,5 +3,4 @@
 /.nyc_output
 /npm-debug.log
 /.eslintrc.js
-/.env
 /.snyk
