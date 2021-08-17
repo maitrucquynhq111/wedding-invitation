@@ -25,9 +25,8 @@ class AccountController extends BaseController {
     }
 
     async login(req, res) {
-
         try { 
-            if (!req.recaptcha.error) {
+            // if (!req.recaptcha.error) {
 
                 let param = {
                     username: req.body.username,
@@ -51,9 +50,9 @@ class AccountController extends BaseController {
                 }
 
                 this._handleResult(user, res);
-            } else {
-                this._handleError('Please valid reCaptcha', res);
-            }
+            // } else {
+            //     this._handleError('Please valid reCaptcha', res);
+            // }
         } catch (e) {
             this._handleError(e, res);
         }

@@ -21,6 +21,12 @@ class DataConfigEntity extends BaseEntityMongoDb {
         let newObj = new this._model(data);
         return newObj.save();
     }
+
+    updateDataConfig(id, fieldObj) {
+        return this._model.findByIdAndUpdate(id, {
+            '$set': fieldObj
+        }, { upsert: true });
+    }
 }
 
 module.exports = DataConfigEntity;
