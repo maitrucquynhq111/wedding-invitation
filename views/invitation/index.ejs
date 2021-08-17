@@ -46,7 +46,6 @@
 
 </head>
 
-
 <body>
 
     <div id="wrapper">
@@ -55,13 +54,13 @@
             <section class="open-book">
                 <article>
                     <div class="card-welcome">
-                        <img class="bg-top-right" src="/assets/images/right-top.png" />
-                        <img class="bg-bottom-left" src="/assets/images/right-top.png" />
+                        <!-- <img class="bg-top-right" src="/assets/images/right-top.png" />
+                        <img class="bg-bottom-left" src="/assets/images/right-top.png" /> -->
 
 
                         <div class="share-buttons">
                             <a style="padding-top: 5px"
-                                href="<%= data.cfg.male.location.map %>"
+                                href="<%= data.cfg.location.map %>"
                                 target="_blank">
                                 <div class="share-button">
                                     <div class="share-button-secondary">
@@ -92,23 +91,23 @@
 
                         <div class="wrap-card-welcome">
 
-                            <div class="card-welcome-header">
+                            <!-- <div class="card-welcome-header">
                                 <div class="card-welcome-text vni">
                                     Wedding
                                 </div>
                                 <div class="card-welcome-date">
-                                    <%= data.cfg.male.time_start.date.lunar.day  %>
+                                    <%= data.cfg.time_start.date.lunar.day  %>
                                     -
-                                    <%= data.cfg.male.time_start.date.lunar.month  %>
+                                    <%= data.cfg.time_start.date.lunar.month  %>
                                     -
-                                    <%= data.cfg.male.time_start.date.lunar.year  %> 
+                                    <%= data.cfg.time_start.date.lunar.year  %> 
                                 </div>
 
-                            </div>
+                            </div> -->
 
-                            <div class="card-welcome-invite-name vni">
+                            <!-- <div class="card-welcome-invite-name vni">
                                 <%= (data.mode == 2 ? "Kính mời: " + data.invitee.name: "Kính mời ....................")  %>
-                            </div>
+                            </div> -->
                         </div>
 
                     </div>
@@ -146,18 +145,19 @@
                                 </div>
                             </div>
                             <div class="card-information"> 
-                                    <span style="padding-top: 10px">Hôn lễ được tổ chức vào hồi <%= data.cfg.male.time_start.time.hour  %> giờ 
-                                        <%= data.cfg.male.time_start.time.minute  %>"</span>
+                                    <span style="padding-top: 10px">Hôn lễ được tổ chức vào lúc <%= data.cfg.time_start.time.hour  %> giờ 
+                                        <%= data.cfg.time_start.time.minute  %></span>
                                     <div class="information-time">
-                                        <span class="week vni">Thứ <%= data.cfg.male.time_start.date.day_of_week  %></span>
-                                        <span class="day btn"> <%= data.cfg.male.time_start.date.lunar.day  %></span>
-                                        <span class="month vni">Tháng  <%= data.cfg.male.time_start.date.lunar.month  %></span>
+                                        <span class="week">Ngày</span>
+                                        <span class="day btn"> <%= data.cfg.time_start.date.solar.day  %></span>
+                                        <span class="month">Tháng</span>
+                                        <span class="day btn"><%= data.cfg.time_start.date.solar.month  %></span>
                                     </div>
-                                    <span class="detail-time">(Tức ngày <%= data.cfg.male.time_start.date.lunar.day %>/
-                                        <%= data.cfg.male.time_start.date.lunar.month  %>)</span> 
-                                <div style="padding-top:10px">Tại tự gia Nhà Trai </div>
+                                    <span class="detail-time">(Tức ngày <%= data.cfg.time_start.date.lunar.day %>/
+                                        <%= data.cfg.time_start.date.lunar.month  %> ÂL)</span> 
+                                <div style="padding-top:10px">Tại tư gia </div>
                                 <div class="address">
-                                    <%= data.cfg.male.location.text  %>
+                                    <%= data.cfg.location.text  %>
                                 </div>
 
                             </div>
@@ -170,17 +170,17 @@
                             <div class="wrap-footer">
                                 <div class="footer-information">
                                     <div class="home-male">
-                                        <span class="footer-header vni">Nhà Trai</span>
+                                        <span class="footer-header">Nhà Trai</span>
                                         <div class="family-information">
-                                            <p class="family-name"> <%= data.cfg.male.parent.father  %></p>
-                                            <p class="family-name"><%= data.cfg.male.parent.mother  %></p>
+                                            <p class="family-name vni"> <%= data.cfg.male.parent.father  %></p>
+                                            <p class="family-name vni"><%= data.cfg.male.parent.mother  %></p>
                                         </div>
                                     </div>
                                     <div class="home-female">
-                                        <span class="footer-header vni">Nhà Gái</span>
+                                        <span class="footer-header">Nhà Gái</span>
                                         <div class="family-information">
-                                            <p class="family-name"> <%= data.cfg.female.parent.father  %></p>
-                                            <p class="family-name"><%= data.cfg.female.parent.mother  %></p>
+                                            <p class="family-name vni"> <%= data.cfg.female.parent.father  %></p>
+                                            <p class="family-name vni"><%= data.cfg.female.parent.mother  %></p>
                                         </div>
                                     </div>
                                 </div>
@@ -216,8 +216,7 @@
     <script src="/assets/js/app.js"></script> 
     <script src="/assets/js/base/ajax.js"></script>
     <script src="/assets/js/base/notify.js"></script>
-    <script src="/assets/js/live/invitation/fonts.handle.js"></script> 
- 
+    <script src="/assets/js/live/invitation/fonts.handle.js"></script>
 </body>
 
 </html>

@@ -37,7 +37,7 @@ class InvocationController extends BaseController {
     }
     async createInvocation(req, res) { 
         try { 
-            if (!req.recaptcha.error) {
+            // if (!req.recaptcha.error) {
 
                 if (this._handleValidationResult(req, res)){
                     return false;
@@ -52,9 +52,9 @@ class InvocationController extends BaseController {
                 }else{
                     this._handleError('Invalid data', res);
                 }
-            } else {
-                this._handleError('Please valid reCaptcha', res);
-            }
+            // } else {
+            //     this._handleError('Please valid reCaptcha', res);
+            // }
         } catch (error) { 
             this._handleError(error, res);
         }

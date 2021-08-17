@@ -1,6 +1,6 @@
 @font-face {
   font-family: wedding-font-vni;
-  src: url(../fonts/wedding/VfWedding04.ttf);
+  src: url(../fonts/wedding/VfWedding08.ttf);
 }
 .vni{
   font-family: wedding-font-vni;
@@ -389,6 +389,7 @@
 }
 .card-header-inviter.name{
   font-size: 22px;
+  color: navy
 }
 .card-welcome-text{
     font-family: wedding-font-vni;
@@ -467,7 +468,7 @@
   border-top: double;
   border-bottom: double;
   padding: 0 10px;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 .end-row {
@@ -487,12 +488,13 @@
 }
 
 .footer-information .footer-header {
-  font-family: wedding-font-vni;
-  font-size: 22px;
+  /* font-size: 22px; */
+  /* color: navy */
 }
 .family-name {
-  font-size: 16px;
+  font-size: 22px;
   margin: 0px;
+  color: navy
 }
  
 .share-buttons {
