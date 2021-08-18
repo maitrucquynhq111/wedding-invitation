@@ -13,7 +13,6 @@ const session = require('express-session');
 const app = express();
 
 require('./configs/mongo-db');
-console.log("process.env: ", process.env)
 // view engine setup
 
 app.use(express.static(__dirname + '/public'));
