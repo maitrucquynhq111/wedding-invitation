@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "test": "snyk test && nyc mocha --recursive test",
-    "start": "node ./bin/www | \"node_modules/.bin/bunyan\"",
-    "dev": "nodemon ./bin/www | \"node_modules/.bin/bunyan\"",
+    "start": "env-cmd -f .env.production node ./bin/www | \"node_modules/.bin/bunyan\"",
+    "dev": "env-cmd -f .env.local nodemon ./bin/www | \"node_modules/.bin/bunyan\"",
     "start-win": "TITLE Wedding Invitation  &&  node ./bin/www | \"node_modules/.bin/bunyan\"",
-    "heroku-start": "node ./bin/www | \"node_modules/.bin/bunyan\""
+    "heroku-start": "env-cmd -f .env.production node ./bin/www | \"node_modules/.bin/bunyan\""
   },
   "author": "sauanla",
   "license": "MIT",
@@ -22,6 +22,7 @@
     "debug": "~2.6.3",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
+    "env-cmd": "^10.1.0",
     "express": "^4.16.0",
     "express-ejs-layouts": "^2.5.0",
     "express-recaptcha": "^5.0.2",
