@@ -31,6 +31,7 @@ const server = http.createServer(app);
  */
 
 server.listen(port, function () {
+    console.log("port: ", port)
     log.info('✓ The bundle is now ready for serving!');
     log.info(
         'Open in inline mode:',
